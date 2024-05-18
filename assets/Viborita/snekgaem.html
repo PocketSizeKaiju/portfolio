@@ -1,0 +1,265 @@
+<html>
+
+<head>
+  <title>Viborita</title>
+</head>
+
+<body>
+  <div id="puntuacion">0</div>
+  <canvas id="canvasViborita" width="300" height="300"></canvas>
+
+  <style>
+    #canvasViborita {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #puntuacion {
+      font-family: "Consolas", monospace;
+      font-size: 4rem;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+
+
+  <script>
+    const BORDE_PANTALLA = "#A9A9A9";
+    const FONDO_PANTALLA = "#a4c560";
+    const COLOR_VIBORITA = "#2b3319";
+    const BORDE_VIBORITA = "#2b3319";
+    const COLOR_COMIDA = "#2b3319";
+    const BORDE_COMIDA = "#2b3319";
+
+    const DISTANCIA_DEL_BORDE = 2;
+
+    let viborita = [
+      { x: 150, y: 150 },
+      { x: 140, y: 150 },
+      { x: 130, y: 150 },
+      { x: 120, y: 150 },
+      { x: 110, y: 150 }
+    ]
+
+
+    let puntuacion = 0;
+    let velocidad = 100;
+    let cambioDeDireccion = false;
+    let dx = 10; //velocidad horizontal
+    let dy = 0;  //velocidad vertical
+    let comida_x;
+    let comida_y;
+
+    const canvasViborita = document.getElementById("canvasViborita");
+    const canvasViborita_ctx = canvasViborita.getContext("2d");
+
+    main();
+
+    generarComida();
+
+    document.addEventListener("keydown", cambiarDireccion);
+    document.addEventListener("touchstart", manejarToqueInicial);
+    document.addEventListener("touchend", manejarToqueFinal);
+
+    function main() {
+
+      if (terminoElJuego()) {
+        document.addEventListener("keydown", function reiniciarJuego(evento) {
+          location.reload();
+        });
+
+        document.addEventListener("touchstart", function reiniciarJuego(evento) {
+          location.reload();
+        });
+
+        return;
+      };
+
+      cambioDeDireccion = false;
+      setTimeout(function onTick() {
+        limpiarCanvas();
+        dibujarComida();
+        moverViborita();
+        dibujarViborita();
+
+        main();
+      }, velocidad)
+    }
+
+    function limpiarCanvas() {
+      canvasViborita_ctx.fillStyle = FONDO_PANTALLA;
+      canvasViborita_ctx.strokestyle = BORDE_PANTALLA;
+      canvasViborita_ctx.fillRect(0, 0, canvasViborita.width, canvasViborita.height);
+      canvasViborita_ctx.strokeRect(0, 0, canvasViborita.width, canvasViborita.height);
+    }
+
+    function dibujarViborita() {
+      viborita.forEach(dibujarParteDeLaViborita)
+    }
+
+    function dibujarComida() {
+      const bordeInternoX = comida_x + DISTANCIA_DEL_BORDE;
+      const bordeInternoY = comida_y + DISTANCIA_DEL_BORDE;
+
+      const anchoInterno = 10 - DISTANCIA_DEL_BORDE * 2;
+      const altoInterno = 10 - DISTANCIA_DEL_BORDE * 2;
+
+      canvasViborita_ctx.fillStyle = COLOR_COMIDA;
+      canvasViborita_ctx.fillRect(
+        bordeInternoX,
+        bordeInternoY,
+        anchoInterno,
+        altoInterno
+      );
+
+      canvasViborita_ctx.strokestyle = BORDE_COMIDA;
+      canvasViborita_ctx.strokeRect(
+        comida_x,
+        comida_y,
+        10,
+        10
+      );
+    }
+
+    function dibujarParteDeLaViborita(parteDeLaViborita) {
+      const bordeInternoX = parteDeLaViborita.x + DISTANCIA_DEL_BORDE;
+      const bordeInternoY = parteDeLaViborita.y + DISTANCIA_DEL_BORDE;
+
+      const anchoInterno = 10 - DISTANCIA_DEL_BORDE * 2;
+      const altoInterno = 10 - DISTANCIA_DEL_BORDE * 2;
+
+      canvasViborita_ctx.fillStyle = COLOR_VIBORITA;
+      canvasViborita_ctx.fillRect(
+        bordeInternoX,
+        bordeInternoY,
+        anchoInterno,
+        altoInterno
+      );
+
+      canvasViborita_ctx.strokestyle = BORDE_VIBORITA;
+      canvasViborita_ctx.strokeRect(
+        parteDeLaViborita.x,
+        parteDeLaViborita.y,
+        10,
+        10
+      );
+    }
+
+    function moverViborita() {
+      const cabeza = { x: viborita[0].x + dx, y: viborita[0].y + dy };
+      viborita.unshift(cabeza);
+      const SE_COMIO_LA_COMIDA = viborita[0].x === comida_x && viborita[0].y === comida_y;
+      if (SE_COMIO_LA_COMIDA) {
+        puntuacion += 10;
+        velocidad = velocidad - 1;
+        console.log(velocidad)
+
+        document.getElementById("puntuacion").innerHTML = puntuacion;
+        generarComida();
+      } else {
+        viborita.pop();
+      }
+    }
+
+    function cambiarDireccion(event) {
+      const BOTON_IZQUIERDA = 37;
+      const BOTON_DERECHA = 39;
+      const BOTON_ARRIBA = 38;
+      const BOTON_ABAJO = 40;
+
+      if (cambioDeDireccion) return;
+      cambioDeDireccion = true;
+
+      if ((dx !== 0 || dy !== 0)) {
+        const BOTON_APRETADO = event.keyCode;
+        const PARA_ARRIBA = dy === -10;
+        const PARA_ABAJO = dy === 10;
+        const PARA_LA_DERECHA = dx === 10;
+        const PARA_LA_IZQUIERDA = dx === -10;
+
+        if (BOTON_APRETADO === BOTON_IZQUIERDA && !PARA_LA_DERECHA) {
+          dx = -10;
+          dy = 0;
+        }
+        if (BOTON_APRETADO === BOTON_ARRIBA && !PARA_ABAJO) {
+          dx = 0;
+          dy = -10;
+        }
+        if (BOTON_APRETADO === BOTON_DERECHA && !PARA_LA_IZQUIERDA) {
+          dx = 10;
+          dy = 0;
+        }
+        if (BOTON_APRETADO === BOTON_ABAJO && !PARA_ARRIBA) {
+          dx = 0;
+          dy = 10;
+        }
+      }
+    }
+
+    function manejarToqueInicial(event) {
+      inicioX = event.touches[0].clientX;
+      inicioY = event.touches[0].clientY;
+    }
+
+    function manejarToqueFinal(event) {
+      const finalX = event.changedTouches[0].clientX;
+      const finalY = event.changedTouches[0].clientY;
+
+      const deltaX = finalX - inicioX;
+      const deltaY = finalY - inicioY;
+
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 0 && dx !== -10) {
+          dx = 10;
+          dy = 0;
+        } else if (deltaX < 0 && dx !== 10) {
+          dx = -10;
+          dy = 0;
+        }
+      } else {
+        if (deltaY > 0 && dy !== -10) {
+          dx = 0;
+          dy = 10;
+        } else if (deltaY < 0 && dy !== 10) {
+          dx = 0;
+          dy = -10;
+        }
+      }
+    }
+
+    function terminoElJuego() {
+      for (let i = 4; i < viborita.length; i++) {
+        if (viborita[i].x === viborita[0].x && viborita[i].y === viborita[0].y) return true
+      }
+      const PEGO_PARED_IZQUIERDA = viborita[0].x < 0;
+      const PEGO_PARED_DERECHA = viborita[0].x > canvasViborita.width - 10;
+      const PEGO_PARED_ARRIBA = viborita[0].y < 0;
+      const PEGO_PARED_ABAJO = viborita[0].y > canvasViborita.height - 10;
+      return PEGO_PARED_IZQUIERDA || PEGO_PARED_DERECHA || PEGO_PARED_ARRIBA || PEGO_PARED_ABAJO
+    }
+
+    function generarComida() {
+      comida_x = randomComida(0, canvasViborita.width - 10);
+      comida_y = randomComida(0, canvasViborita.height - 10);
+
+      viborita.forEach(function viboritaComioComida(parte) {
+        const SE_LA_COMIO = parte.x == comida_x && parte.y == comida_y;
+        if (SE_LA_COMIO) generarComida();
+      });
+    }
+
+    function randomComida(min, max) {
+      return Math.round((Math.random() * (max - min) + min) / 10) * 10;
+    }
+  </script>
+
+</body>
+
+</html>

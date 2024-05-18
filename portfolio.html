@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1> <span class="demoniac">Portfolio</span></h1>
+  </header>
+
+  <div class="idioma">
+    <select onchange="changeLanguage(this)" class="idioma">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="jp">日本語</option>
+    </select>
+  </div>
+
+  <main id="main-es">
+    <section class="seccion-proyectos">
+      <div>
+        <button onclick="showCategory('codigo')">Código</button>
+        <button onclick="showCategory('modelo3d')">Modelos 3D</button>
+        <button onclick="showCategory('dibujos')">Ilustraciones</button>
+      </div>
+
+      <div class="categoria" id="codigo">
+        <h3>Códigos</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/viborita.png" alt="Viborita">
+            <h4>Viborita</h4>
+            <a href="./assets/Viborita/snekgaem.html" target="_blank">Abrir</a>
+          </div>
+          <div class="proyecto">
+            <img src="" alt="El ORKO">
+            <h4>El ORKO</h4>
+            <a href="https://github.com/PocketSizeKaiju/ElOrko" target="_blank">Abrir</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/PETRIS.png" alt="Petris">
+            <h4>PETRIS</h4>
+            <a href="https://github.com/PocketSizeKaiju/PETRIS" target="_blank">Abrir</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/Tron.png" alt="Tron">
+            <h4>Tron Like Game</h4>
+            <a href="https://github.com/PocketSizeKaiju/TronLikeGame" target="_blank">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria" id="modelo3d">
+        <h3>Modelos 3D</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/meDebesMasBrownies.png" alt="Synthwave city">
+            <h4>Synthwave City</h4>
+            <a href="./assets/3d/City.fbx" download="synthwavecity.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/utt.png" alt="Ultraton">
+            <h4>Ultraton</h4>
+            <a href="./assets/3d/ultraton.fbx" download="ultraton.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/armasSplatton.png" alt="Armas de splatoon">
+            <h4>Armas de Splatoon</h4>
+            <a href="./assets/3d/splatweap.fbx" download="splatweap.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/villano liquido.png" alt="villano liquido">
+            <h4>Villano Liquido</h4>
+            <a href="./assets/3d/StickFigure.fbx" download="StickFigure.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/space.png" alt="Espacio exterios">
+            <h4>Espacio exterior</h4>
+            <a href="./assets/3d/Space.fbx" download="Space.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/cuarto.png" alt="Cuarto">
+            <h4>Cuarto</h4>
+            <a href="./assets/3d/RoomUp.blend" download="RoomUp.blend" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/Roboto.png" alt="Robotito">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Roboto.mp4" type="video/mp4">
+            </video>
+            <h4>Robot Chibi</h4>
+            <a href="./assets/3d/Roboto.fbx" download="Roboto.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/pyuru.png" alt="Bateria">
+            <h4>Batería de Moa de Plasmagica</h4>
+            <a href="./assets/3d/pyuru.fbx" download="pyuru.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/naginata.png" alt="Naginata">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Luk.mp4" type="video/mp4">
+            </video>
+            <h4>Naginata estilo RWBY</h4>
+            <a href="./assets/3d/naginatadelucas.fbx" download="naginata.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/gliter0001-0250.mp4" type="video/mp4">
+            </video>
+            <h4>Brillantina</h4>
+            <a href="./assets/3d/Glitter.fbx" download="glitter.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/gaitlinswod.png" alt="GaitlingSword">
+            <img src="./assets/imagenes/modelos/arrowmodo.png" alt="Modo Arco">
+            <h4>GaitlingSword</h4>
+            <a href="./assets/3d/GAITLINGUN.blend" download="gs.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/varios gadgets.png" alt="varios gadgets">
+            <h4>Artilugios varios</h4>
+            <a href="./assets/3d/Gadgets.blend" download="gadgets.blend" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/edge.png" alt="The Edge">
+            <h4>Espada de Internet Explorer en webcomic de Merryweather</h4>
+            <a href="./assets/3d/edge.fbx" download="edge.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/shield.png" alt="escudo">
+            <h4>Campo de fuerza</h4>
+            <a href="./assets/3d/forceFieldShieldthing.fbx" download="shield.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/dado.png" alt="dado">
+            <h4>Dado</h4>
+            <a href="./assets/3d/Die.fbx" download="die.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/blimp.png" alt="dirigible">
+            <h4>Dirigible Steampunk</h4>
+            <a href="./assets/3d/Blimp.fbx" download="blimp.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/rataberenjena.png" alt="Rata Berenjena">
+            <h4>Rata Berenjena</h4>
+            <a href="./assets/3d/Aylward.fbx" download="rb.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/space scene.png">
+            <h4>Escena en el espacio</h4>
+            <a href="./assets/3d/asasdf.fbx" download="rasdb.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/boar.png">
+            <h4>Mecha Jabalí</h4>
+            <a href="./assets/3d/boar.fbx" download="boar.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/toru.png">
+            <h4>Tohru de Kobayashi Chi No Maid Dragon</h4>
+            <a href="./assets/3d/torhu.fbx" download="tohru.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/guita.png">
+            <h4>Love Guitar Rod de Suite Pretty Cure</h4>
+            <a href="./assets/3d/guitarRod.fbx" download="gr.fbx" target="_blank">Descargar Modelo</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/zkrky.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/SeiboroOfuLaito.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/ScissorBlade.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/ShokoraDonSomethingIGuess.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Corns.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/M'Mint.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria" id="dibujos">
+        <h3>Ilustraciones</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/ZaBee.png" alt="Capitana abeja y pirata gato">
+            <h4>Capitana abeja y pirata gato</h4>
+            <a href="./assets/imagenes/ZaBee.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/bleu.png" alt="Bleu Berry">
+            <h4>Fanart de Bleu Berry de Dragon Mango</h4>
+            <a href="./assets/imagenes/bleu.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/BlacksmithAnvilsandDrogons.png" alt="Blacksmith Anvils">
+            <h4>Personaje original, Herrero y su mascota conocen a un dragón</h4>
+            <a href="./assets/imagenes/BlacksmithAnvilsandDrogons.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/BlrandNeoNewSparlyMinty.png" alt="Minty">
+            <h4>Personaje original, Minty, la demonio</h4>
+            <a href="./assets/imagenes/BlrandNeoNewSparlyMinty.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/bonezzzzzz.png" alt="Bones">
+            <!-- <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/bonezzz.mp4" type="video/mp4">
+            </video> -->
+            <h4>Personaje original, Huesos</h4>
+            <a href="./assets/imagenes/bonezzzzzz.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DChH.png" alt="Entrenadora Pokemon">
+            <h4>Personaje original, Entrenadora Pokémon</h4>
+            <a href="./assets/imagenes/DChH.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/ddd.png" alt="Los chicos">
+            <h4>Personajes originales, Chicos y Hombres varios</h4>
+            <a href="./assets/imagenes/ddd.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDRopas.png" alt="Ropas">
+            <h4>Personajes originales, Ropas varias</h4>
+            <a href="./assets/imagenes/DDRopas.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDShake&Influencia.png" alt="Ciencia-Chan">
+            <h4>Personajes originales, Ciencia-Chan</h4>
+            <a href="./assets/imagenes/DDShake&Influencia.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDIAATASci.png" alt="Ciencia-Chan Transformada">
+            <h4>Personajes originales, Ciencia-Chan Transformada</h4>
+            <a href="./assets/imagenes/DDIAATASci.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/g4251.png" alt="DeepSea Logo">
+            <h4>Logo, DeepSea</h4>
+            <a href="./assets/imagenes/g4251.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/gif.gif" alt="La Madriguera">
+            <h4>Logo, La M4driguera</h4>
+            <a href="./assets/imagenes/gif.gif" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/HiangXioBiki.png" alt="Hibiki, vestida como Yang Xiao Long">
+            <h4>Hojo Hibiki de Suite Pretty cure vestida como Yang Xiao Long de RWBY</h4>
+            <a href="./assets/imagenes/HiangXioBiki.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/lina.png" alt="Lina">
+            <h4>Lina de Four Leaf</h4>
+            <a href="./assets/imagenes/lina.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/MeduHat (2).png" alt="Medusa con un sombrero">
+            <h4>Personaje Original, Medusa con un sombrero</h4>
+            <a href="./assets/imagenes/MeduHat (2).png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/noirtrick copia.png" alt="ghost trick">
+            <h4>Fanart de Ghost Trick</h4>
+            <a href="./assets/imagenes/noirtrick copia.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/PARENLASROTATIVAS!!!!! copia.png" alt="Ruru Amour">
+            <h4>Fanart de Ruru Amour de Huggto! Pretty Cure</h4>
+            <a href="./assets/imagenes/PARENLASROTATIVAS!!!!! copia.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/This is.png" alt="Old logo">
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/WCHSBWCHN.png" alt="Liko y Akko">
+            <h4>Comisión, Liko de Mahou Tsukai Pretty Cure hablando con Akko de Little Witch Academia</h4>
+            <a href="./assets/imagenes/WCHSBWCHN.png" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/MantecolDemo.mp4" type="video/mp4">
+            </video>
+            <h4>Animación, Personaje original peleando</h4>
+            <a href="./assets/imagenes/MantecolDemo.mp4" target="_blank">Ver el retrato</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/THEthing.png" alt="Liko y Akko">
+            <!-- <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/TheThingSP.mp4" type="video/mp4">
+            </video> -->
+            <h4>Personaje Original, entrenadora pokémon con su equipo y speedpaint</h4>
+            <a href="./assets/imagenes/THEthing.png" target="_blank">Ver el retrato</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-contacto">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a href="mailto:mislopez99@gmail.com">mislopez99gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/macarena-lópez-eguren-686865234">LinkedIn</a></li>
+        <li><a href="https://github.com/PocketSizeKaiju">Github</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <main id="main-en" style="display: none;">
+    <section class="seccion-proyectos">
+      <h2>Projects</h2>
+      <div>
+        <button onclick="showCategory('codigoEn')">Code</button>
+        <button onclick="showCategory('modelo3dEn')">3D models</button>
+        <button onclick="showCategory('dibujosEn')">Illustrations</button>
+      </div>
+
+      <div class="categoria" id="codigoEn">
+        <h3>Codes</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/viborita.png" alt="Viborita">
+            <h4>Snake</h4>
+            <a href="./assets/Viborita/snekgaem.html" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="" alt="El ORKO">
+            <h4>El ORKO</h4>
+            <a href="https://github.com/PocketSizeKaiju/ElOrko" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/PETRIS.png" alt="Petris">
+            <h4>PETRIS</h4>
+            <a href="https://github.com/PocketSizeKaiju/PETRIS" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/Tron.png" alt="Tron">
+            <h4>Tron Like Game</h4>
+            <a href="https://github.com/PocketSizeKaiju/TronLikeGame" target="_blank">Open</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria" id="modelo3dEn">
+        <h3>3D Models</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/meDebesMasBrownies.png" alt="Synthwave city">
+            <h4>Synthwave City</h4>
+            <a href="./assets/3d/City.fbx" download="synthwavecity.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/utt.png" alt="Ultraton">
+            <h4>Ultraton</h4>
+            <a href="./assets/3d/ultraton.fbx" download="ultraton.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/armasSplatton.png" alt="Armas de splatoon">
+            <h4>Splatoon's Weapons</h4>
+            <a href="./assets/3d/splatweap.fbx" download="splatweap.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/villano liquido.png" alt="villano liquido">
+            <h4>Liquid Villains</h4>
+            <a href="./assets/3d/StickFigure.fbx" download="StickFigure.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/space.png" alt="Espacio exterios">
+            <h4>Outer Space</h4>
+            <a href="./assets/3d/Space.fbx" download="Space.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/cuarto.png" alt="Cuarto">
+            <h4>Room</h4>
+            <a href="./assets/3d/RoomUp.blend" download="RoomUp.blend" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/Roboto.png" alt="Robotito">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Roboto.mp4" type="video/mp4">
+            </video>
+            <h4>Robot Chibi</h4>
+            <a href="./assets/3d/Roboto.fbx" download="Roboto.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/pyuru.png" alt="Bateria">
+            <h4>Drumset of Moa from Plasmagica</h4>
+            <a href="./assets/3d/pyuru.fbx" download="pyuru.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/naginata.png" alt="Naginata">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Luk.mp4" type="video/mp4">
+            </video>
+            <h4>RWBY Style Naginata</h4>
+            <a href="./assets/3d/naginatadelucas.fbx" download="naginata.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/gliter0001-0250.mp4" type="video/mp4">
+            </video>
+            <h4>Glitter FX</h4>
+            <a href="./assets/3d/Glitter.fbx" download="glitter.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/gaitlinswod.png" alt="GaitlingSword">
+            <img src="./assets/imagenes/modelos/arrowmodo.png" alt="Modo Arco">
+            <h4>GaitlingSword</h4>
+            <a href="./assets/3d/GAITLINGUN.blend" download="gs.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/varios gadgets.png" alt="varios gadgets">
+            <h4>Various Gadgets</h4>
+            <a href="./assets/3d/Gadgets.blend" download="gadgets.blend" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/edge.png" alt="The Edge">
+            <h4>Internet Explorer's Sword from Merryweather's Webcomic</h4>
+            <a href="./assets/3d/edge.fbx" download="edge.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/shield.png" alt="escudo">
+            <h4>ForceField FX</h4>
+            <a href="./assets/3d/forceFieldShieldthing.fbx" download="shield.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/dado.png" alt="dado">
+            <h4>Dice</h4>
+            <a href="./assets/3d/Die.fbx" download="die.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/blimp.png" alt="dirigible">
+            <h4>Steampunk Blimp</h4>
+            <a href="./assets/3d/Blimp.fbx" download="blimp.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/rataberenjena.png" alt="Rata Berenjena">
+            <h4>Eggplant Rat</h4>
+            <a href="./assets/3d/Aylward.fbx" download="rb.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/space scene.png">
+            <h4>Space Scene</h4>
+            <a href="./assets/3d/asasdf.fbx" download="rasdb.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/boar.png">
+            <h4>Mecha Boar</h4>
+            <a href="./assets/3d/boar.fbx" download="boar.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/toru.png">
+            <h4>Tohru from Kobayashi Chi No Maid Dragon</h4>
+            <a href="./assets/3d/torhu.fbx" download="tohru.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/guita.png">
+            <h4>Love Guitar Rod from Suite Pretty Cure</h4>
+            <a href="./assets/3d/guitarRod.fbx" download="gr.fbx" target="_blank">Download Model</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/zkrky.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/SeiboroOfuLaito.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/ScissorBlade.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/ShokoraDonSomethingIGuess.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Corns.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/M'Mint.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria" id="dibujosEn">
+        <h3>Illustrations</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/ZaBee.png" alt="Capitana abeja y pirata gato">
+            <h4>Captain Bee and Pirate Cat</h4>
+            <a href="./assets/imagenes/ZaBee.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/bleu.png" alt="Bleu Berry">
+            <h4>Fanart of Bleu Berry from Dragon Mango</h4>
+            <a href="./assets/imagenes/bleu.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/BlacksmithAnvilsandDrogons.png" alt="Blacksmith Anvils">
+            <h4>Original Character, Blacksmith and his Anvil Pet meet a Dragon sketches</h4>
+            <a href="./assets/imagenes/BlacksmithAnvilsandDrogons.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/BlrandNeoNewSparlyMinty.png" alt="Minty">
+            <h4>Original Character, Minty, The Demon</h4>
+            <a href="./assets/imagenes/BlrandNeoNewSparlyMinty.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/bonezzzzzz.png" alt="Bones">
+            <!-- <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/bonezzz.mp4" type="video/mp4">
+            </video> -->
+            <h4>Original Character, Bones</h4>
+            <a href="./assets/imagenes/bonezzzzzz.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DChH.png" alt="Entrenadora Pokemon">
+            <h4>Original Character, Pokémon Trainer</h4>
+            <a href="./assets/imagenes/DChH.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/ddd.png" alt="Los chicos">
+            <h4>Original Characters, Various guys sketches</h4>
+            <a href="./assets/imagenes/ddd.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDRopas.png" alt="Ropas">
+            <h4>Original Characters, Various Clothes</h4>
+            <a href="./assets/imagenes/DDRopas.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDShake&Influencia.png" alt="Ciencia-Chan">
+            <h4>Original Characters, Ciencia-Chan</h4>
+            <a href="./assets/imagenes/DDShake&Influencia.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDIAATASci.png" alt="Ciencia-Chan Transformada">
+            <h4>Original Characters, Transformed Ciencia-Chan</h4>
+            <a href="./assets/imagenes/DDIAATASci.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/g4251.png" alt="DeepSea Logo">
+            <h4>Logo, DeepSea</h4>
+            <a href="./assets/imagenes/g4251.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/gif.gif" alt="La Madriguera">
+            <h4>Logo, La M4driguera</h4>
+            <a href="./assets/imagenes/gif.gif" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/HiangXioBiki.png" alt="Hibiki, vestida como Yang Xiao Long">
+            <h4>Hojo Hibiki from Suite Pretty Cure dressed as Yang Xiao Long from RWBY</h4>
+            <a href="./assets/imagenes/HiangXioBiki.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/lina.png" alt="Lina">
+            <h4>Lina from Four Leaf</h4>
+            <a href="./assets/imagenes/lina.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/MeduHat (2).png" alt="Medusa con un sombrero">
+            <h4>Original Character, Medusa with a sombrero</h4>
+            <a href="./assets/imagenes/MeduHat (2).png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/noirtrick copia.png" alt="ghost trick">
+            <h4>Fanart of Ghost Trick</h4>
+            <a href="./assets/imagenes/noirtrick copia.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/PARENLASROTATIVAS!!!!! copia.png" alt="Ruru Amour">
+            <h4>Fanart of Ruru Amour from Huggto! Pretty Cure</h4>
+            <a href="./assets/imagenes/PARENLASROTATIVAS!!!!! copia.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/This is.png" alt="Old logo">
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/WCHSBWCHN.png" alt="Liko y Akko">
+            <h4>Liko from Mahou Tsukai Pretty Cure talking with Akko from Little Witch Academia</h4>
+            <a href="./assets/imagenes/WCHSBWCHN.png" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/MantecolDemo.mp4" type="video/mp4">
+            </video>
+            <h4>Animation, original characte fighting</h4>
+            <a href="./assets/imagenes/MantecolDemo.mp4" target="_blank">Open</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/THEthing.png" alt="Liko y Akko">
+            <!-- <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/TheThingSP.mp4" type="video/mp4">
+            </video> -->
+            <h4>Original Character, Pokémon Trainer with her team</h4>
+            <a href="./assets/imagenes/THEthing.png" target="_blank">Open</a>
+          </div>
+        </div>
+      </div>
+
+    <section class="seccion-contacto">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:mislopez99@gmail.com">mislopez99gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/macarena-lópez-eguren-686865234">LinkedIn</a></li>
+        <li><a href="https://github.com/PocketSizeKaiju">Github</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <main id="main-jp" style="display: none;">
+    <section class="seccion-proyectos">
+      <h2>プロジェクト</h2>
+      <div>
+        <button onclick="showCategory('codigoJp')">コード</button>
+        <button onclick="showCategory('modelo3dJp')">3Dモデル</button>
+        <button onclick="showCategory('dibujosJp')">イラスト</button>
+      </div>
+
+      </div>
+      <div class="categoria" id="codigoJp">
+        <h3>コード</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/viborita.png" alt="Viborita">
+            <h4>ヘビゲーム</h4>
+            <a href="./assets/Viborita/snekgaem.html" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="" alt="El ORKO">
+            <h4>El ORKO</h4>
+            <a href="https://github.com/PocketSizeKaiju/ElOrko" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/PETRIS.png" alt="Petris">
+            <h4>PETRIS</h4>
+            <a href="https://github.com/PocketSizeKaiju/PETRIS" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/juegos/Tron.png" alt="Tron">
+            <h4>Tron Like Game</h4>
+            <a href="https://github.com/PocketSizeKaiju/TronLikeGame" target="_blank">開ける</a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <div class="categoria" id="modelo3dJp">
+        <h3>3Dモデル</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/meDebesMasBrownies.png" alt="Synthwave city">
+            <h4>Synthwave City</h4>
+            <a href="./assets/3d/City.fbx" download="synthwavecity.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/utt.png" alt="Ultraton">
+            <h4>ウルトラトン</h4>
+            <a href="./assets/3d/ultraton.fbx" download="ultraton.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/armasSplatton.png" alt="Armas de splatoon">
+            <h4>スプラトゥーンの武器</h4>
+            <a href="./assets/3d/splatweap.fbx" download="splatweap.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/villano liquido.png" alt="villano liquido">
+            <h4>リキッド・ヴィラン</h4>
+            <a href="./assets/3d/StickFigure.fbx" download="StickFigure.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/space.png" alt="Espacio exterios">
+            <h4>宇宙</h4>
+            <a href="./assets/3d/Space.fbx" download="Space.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/cuarto.png" alt="Cuarto">
+            <h4>部屋</h4>
+            <a href="./assets/3d/RoomUp.blend" download="RoomUp.blend" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/Roboto.png" alt="Robotito">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Roboto.mp4" type="video/mp4">
+            </video>
+            <h4>ちびロボット</h4>
+            <a href="./assets/3d/Roboto.fbx" download="Roboto.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/pyuru.png" alt="Bateria">
+            <h4>プラズマジカのモアのドラムセット</h4>
+            <a href="./assets/3d/pyuru.fbx" download="pyuru.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/naginata.png" alt="Naginata">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Luk.mp4" type="video/mp4">
+            </video>
+            <h4>RWBYスタイルなぎなた</h4>
+            <a href="./assets/3d/naginatadelucas.fbx" download="naginata.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/gliter0001-0250.mp4" type="video/mp4">
+            </video>
+            <h4>キラキラ FX</h4>
+            <a href="./assets/3d/Glitter.fbx" download="glitter.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/gaitlinswod.png" alt="GaitlingSword">
+            <img src="./assets/imagenes/modelos/arrowmodo.png" alt="Modo Arco">
+            <h4>ゲイトリングソード</h4>
+            <a href="./assets/3d/GAITLINGUN.blend" download="gs.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/varios gadgets.png" alt="varios gadgets">
+            <h4>色々ガジェット</h4>
+            <a href="./assets/3d/Gadgets.blend" download="gadgets.blend" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/edge.png" alt="The Edge">
+            <h4>メリーウェザーの漫画にネット・エクスプローラーの剣</h4>
+            <a href="./assets/3d/edge.fbx" download="edge.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/shield.png" alt="escudo">
+            <h4>フォースフィールド FX</h4>
+            <a href="./assets/3d/forceFieldShieldthing.fbx" download="shield.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/dado.png" alt="dado">
+            <h4>ダイス</h4>
+            <a href="./assets/3d/Die.fbx" download="die.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/blimp.png" alt="dirigible">
+            <h4>スチームパンク飛行船</h4>
+            <a href="./assets/3d/Blimp.fbx" download="blimp.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/rataberenjena.png" alt="Rata Berenjena">
+            <h4>ナスネズミ</h4>
+            <a href="./assets/3d/Aylward.fbx" download="rb.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/space scene.png">
+            <h4>宇宙の情景</h4>
+            <a href="./assets/3d/asasdf.fbx" download="rasdb.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/boar.png">
+            <h4>メカイノシシ</h4>
+            <a href="./assets/3d/boar.fbx" download="boar.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/toru.png">
+            <h4>小林さんちのメイドラゴンのトール</h4>
+            <a href="./assets/3d/torhu.fbx" download="tohru.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/modelos/guita.png">
+            <h4>スイートプリキュアのラブ・ギター・ロッド</h4>
+            <a href="./assets/3d/guitarRod.fbx" download="gr.fbx" target="_blank">ダウンロード</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/zkrky.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/SeiboroOfuLaito.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/ScissorBlade.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/ShokoraDonSomethingIGuess.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/Corns.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/modelos/M'Mint.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria" id="dibujosJp">
+
+        <h3>イラスト</h3>
+        <div class="grid">
+          <div class="proyecto">
+            <img src="./assets/imagenes/ZaBee.png" alt="Capitana abeja y pirata gato">
+            <h4>ミツバチ隊長と海賊猫</h4>
+            <a href="./assets/imagenes/ZaBee.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/bleu.png" alt="Bleu Berry">
+            <h4>ドラゴンマンゴーにブルーベリーのファンアート</h4>
+            <a href="./assets/imagenes/bleu.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/BlacksmithAnvilsandDrogons.png" alt="Blacksmith Anvils">
+            <h4>オリジナルキャラクター、鍛冶屋と金床ペットがドラゴンに出会うスケッチ</h4>
+            <a href="./assets/imagenes/BlacksmithAnvilsandDrogons.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/BlrandNeoNewSparlyMinty.png" alt="Minty">
+            <h4>オリジナルキャラクター, ミンティの悪魔</h4>
+            <a href="./assets/imagenes/BlrandNeoNewSparlyMinty.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/bonezzzzzz.png" alt="Bones">
+            <!-- <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/bonezzz.mp4" type="video/mp4">
+            </video> -->
+            <h4>オリジナルキャラクター、ボーンズちゃん</h4>
+            <a href="./assets/imagenes/bonezzzzzz.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DChH.png" alt="Entrenadora Pokemon">
+            <h4>オリジナルキャラクター, ポケモントレーナー</h4>
+            <a href="./assets/imagenes/DChH.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/ddd.png" alt="Los chicos">
+            <h4>オリジナルキャラクターs, 色々な男のスケッチ</h4>
+            <a href="./assets/imagenes/ddd.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDRopas.png" alt="Ropas">
+            <h4>オリジナルキャラクター, 色々服</h4>
+            <a href="./assets/imagenes/DDRopas.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDShake&Influencia.png" alt="Ciencia-Chan">
+            <h4>オリジナルキャラクターs, 科学ちゃん</h4>
+            <a href="./assets/imagenes/DDShake&Influencia.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/DDIAATASci.png" alt="Ciencia-Chan Transformada">
+            <h4>オリジナルキャラクターs, 科学ちゃんへんしん</h4>
+            <a href="./assets/imagenes/DDIAATASci.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/g4251.png" alt="DeepSea Logo">
+            <h4>ロゴ, DeepSea</h4>
+            <a href="./assets/imagenes/g4251.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/gif.gif" alt="La Madriguera">
+            <h4>ロゴ, La M4driguera</h4>
+            <a href="./assets/imagenes/gif.gif" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/HiangXioBiki.png" alt="Hibiki, vestida como Yang Xiao Long">
+            <h4>スイートプリキュアの北条響がRWBYのヤン・シャオロンに扮する</h4>
+            <a href="./assets/imagenes/HiangXioBiki.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/lina.png" alt="Lina">
+            <h4>フォーリーフのリナ</h4>
+            <a href="./assets/imagenes/lina.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/MeduHat (2).png" alt="Medusa con un sombrero">
+            <h4>オリジナルキャラクター, 帽子のメデューサ</h4>
+            <a href="./assets/imagenes/MeduHat (2).png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/noirtrick copia.png" alt="ghost trick">
+            <h4>ゴースト・トリックのファンアート</h4>
+            <a href="./assets/imagenes/noirtrick copia.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/PARENLASROTATIVAS!!!!! copia.png" alt="Ruru Amour">
+            <h4>Huggっと！プリキュアにルールーアムールのファンアート</h4>
+            <a href="./assets/imagenes/PARENLASROTATIVAS!!!!! copia.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/This is.png" alt="Old logo">
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/WCHSBWCHN.png" alt="Liko y Akko">
+            <h4>魔法つかいプリキュアのリコがリトルウィッチアカデミアのアッコと対談</h4>
+            <a href="./assets/imagenes/WCHSBWCHN.png" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/MantecolDemo.mp4" type="video/mp4">
+            </video>
+            <h4>アニメーション、オリジナルキャラクターに戦う</h4>
+            <a href="./assets/imagenes/MantecolDemo.mp4" target="_blank">開ける</a>
+          </div>
+          <div class="proyecto">
+            <img src="./assets/imagenes/THEthing.png" alt="Liko y Akko">
+            <!-- <video width="320" height="240" controls muted>
+              <source src="./assets/imagenes/TheThingSP.mp4" type="video/mp4">
+            </video> -->
+            <h4>オリジナルキャラクター, ポケモントレーナーのチーム</h4>
+            <a href="./assets/imagenes/THEthing.png" target="_blank">開ける</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="seccion-contacto">
+      <h2>接触</h2>
+      <ul>
+        <li><a href="mailto:mislopez99@gmail.com">mislopez99gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/macarena-lópez-eguren-686865234">LinkedIn</a></li>
+        <li><a href="https://github.com/PocketSizeKaiju">Github</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
